@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>The Crazy Wagon</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="ui.css"/>
+    <script type="text/javascript" src="./libs/three.js"></script>
+    <script type="text/javascript" src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/dat.gui.js"></script>
+    <script type="text/javascript" src="./libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="./libs/MTLLoader.js"></script>
+    <script type="text/javascript" src="./libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="RollerCoaster.js"></script>
+    <script type="text/javascript" src="Environment.js"></script>
+    <script type="text/javascript" src="MyScene.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $("#lyr_loading").fadeOut(1500);
+            },3000); //tiempo de carga modificar este
+     
+            setTimeout(function() {
+                $("#WebGL-output").fadeIn(500);
+            },3000);
+        });
+    </script>
+
+</head>
+<body>
+
+<!-- Contenedor para la pantalla de carga y logo -->
+<div id="lyr_loading">
+    <div id="lyr_loading_background"></div>
+    <div id="lyr_loading_logo" class="ui_logo"></div>
+</div>
+
+
+<!-- Contenedor para el resto de la aplicación -->
+<div id="WebGL-output">
+</div>
+</body>
+</html>
